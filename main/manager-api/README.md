@@ -18,19 +18,10 @@ Vue 3.x
 如果本机已经安装了MySQL，可以直接在数据库中创建名为`xiaozhi_esp32_server`的数据库。
 
 ```sql
-CREATE DATABASE xiaozhi_esp32_server CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# 已手动创建
+--  CREATE DATABASE xiaozhi_esp32_server CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-如果还没有MySQL，你可以通过docker安装mysql
-
-```
-docker run --name xiaozhi-esp32-server-db \
--e MYSQL_ROOT_PASSWORD=123456 \
--p 3306:3306 \
--e MYSQL_DATABASE=xiaozhi_esp32_server \
--e MYSQL_INITDB_ARGS="--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci" \
--d mysql:latest
-```
 
 # 确认项目数据库连接信息
 

@@ -343,10 +343,10 @@ class AsyncPerformanceTester:
             if llm_name == "CozeLLM":
                 if any(x in config.get("bot_id", "") for x in ["你的"]) \
                         or any(x in config.get("user_id", "") for x in ["你的"]):
-                    print(f"⏭️  LLM {llm_name} 未配置bot_id/user_id，已跳过")
+                    # print(f"⏭️  LLM {llm_name} 未配置bot_id/user_id，已跳过")
                     continue
             elif "api_key" in config and any(x in config["api_key"] for x in ["你的", "placeholder", "sk-xxx"]):
-                print(f"⏭️  LLM {llm_name} 未配置api_key，已跳过")
+                # print(f"⏭️  LLM {llm_name} 未配置api_key，已跳过")
                 continue
 
             # 对于Ollama，先检查服务状态
@@ -360,7 +360,7 @@ class AsyncPerformanceTester:
                 if not await self._check_ollama_service(base_url, model_name):
                     continue
 
-            print(f"📋 添加LLM测试任务: {llm_name}")
+            # print(f"📋 添加LLM测试任务: {llm_name}")
             module_type = config.get('type', llm_name)
             llm = create_llm_instance(module_type, config)
 
@@ -371,10 +371,10 @@ class AsyncPerformanceTester:
 
         # TTS测试任务
         for tts_name, config in self.config.get("TTS", {}).items():
-            token_fields = ["access_token", "api_key", "token"]
-            if any(field in config and any(x in config[field] for x in ["你的", "placeholder"]) for field in
+            token_fields = ["access_token", "api_key", "token","your_token","turn_on"]
+            if any(field in config and any(x in config[field] for x in ["你的", "placeholder","do-not-use"]) for field in
                    token_fields):
-                print(f"⏭️  TTS {tts_name} 未配置access_token/api_key，已跳过")
+                # print(f"⏭️  TTS {tts_name} 未配置access_token/api_key，已跳过")
                 continue
             print(f"🎵 添加TTS测试任务: {tts_name}")
             all_tasks.append(self._test_tts(tts_name, config))

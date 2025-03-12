@@ -21,3 +21,17 @@ xiaozhi-esp32-server
 [manager前后端接口协议](https://app.apifox.com/invite/project?token=H_8qhgfjUeaAL0wybghgU)
 
 [前端页面设计图](https://codesign.qq.com/app/s/526108506410828)
+3d6bd0e23e0c8fa6a1c09c4feea57711769f1183
+8064e84276d809b3a27197d599052e154fdfc277
+f8ece2d984307d14620c48b1a4c30c70db702135
+2b662d3a14d8eb35777887fdcb7581e509d7ade9
+4f3fae81c19730b71c4db02d2685c04c7f1564c6
+7b266ad7c071747830a6d028fb4601e6932d9d30
+f9472627f471b64da136bdf57377c4bfe74b39c6
+16601a67e334f8e183c39be73dd44cef93e9aaf2
+69735207e605046478cc494c7954b5ab41a42f5a
+git cherry-pick 69735207e605046478cc494c7954b5ab41a42f5a
+
+
+ git checkout upstream/main -- config.yaml
+git remote add upstream https://github.com/ahaufox/xiaozhi-esp32-server.git

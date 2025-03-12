@@ -85,7 +85,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
+            <!-- <version>${junit.version}</version> -->
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -136,7 +136,7 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
-            <version>${liquibase-core.version}</version>
+            <!-- <version>${liquibase-core.version}</version> -->
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>

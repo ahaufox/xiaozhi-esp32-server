@@ -178,7 +178,9 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
 
-conda install libopus -y
+
+
+conda install libopus -y 不成功 换 conda install -c conda-forge libopus
 conda install ffmpeg -y
 ```
 
@@ -186,14 +188,6 @@ conda install ffmpeg -y
 
 ## 2.安装本项目依赖
 
-你先要下载本项目源码，源码可以通过`git clone`命令下载，如果你不熟悉`git clone`命令。
-
-你可以用浏览器打开这个地址`https://github.com/xinnan-tech/xiaozhi-esp32-server.git`
-
-打开完，找到页面中一个绿色的按钮，写着`Code`的按钮，点开它，然后你就看到`Download ZIP`的按钮。
-
-点击它，下载本项目源码压缩包。下载到你电脑后，解压它，此时它的名字可能叫`xiaozhi-esp32-server-main`
-你需要把它重命名成`xiaozhi-esp32-server`，在这个文件里，进入到`main`文件夹，再进入到`xiaozhi-server`，好了请记住这个目录`xiaozhi-server`。
 
 ```
 # 继续使用conda环境

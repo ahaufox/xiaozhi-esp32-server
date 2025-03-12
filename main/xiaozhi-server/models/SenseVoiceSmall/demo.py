@@ -8,15 +8,15 @@ model = AutoModel(
     model=model_dir,
     vad_model="fsmn-vad",
     vad_kwargs={"max_single_segment_time": 30000},
-    # device="cuda:0",
+    device="cuda:0",
     hub="hf",
 )
 
 # en
 res = model.generate(
-    input=f"{model.model_path}/example/en.mp3",
+    input=f"{model.model_path}/example/zh.mp3",
     cache={},
-    language="auto",  # "zn", "en", "yue", "ja", "ko", "nospeech"
+    language="en",  # "zn", "en", "yue", "ja", "ko", "nospeech"
     use_itn=True,
     batch_size_s=60,
     merge_vad=True,  #
