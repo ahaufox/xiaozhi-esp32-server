@@ -151,3 +151,8 @@ main/manager-web/node_modules
 .private_config.yaml
 .env.development
 
+main/manager-api/src/main/resources/application-dev.yml
+main/manager-api/src/main/resources/application-dev.yml
+main/xiaozhi-server/config.yaml
+main/xiaozhi-server/models/SenseVoiceSmall/configuration.json
+main/xiaozhi-server/models/SenseVoiceSmall/model-yuyin.pt
